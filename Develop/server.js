@@ -12,4 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // ROUTES
 // create route so that when a person makes a get request to notes, they receive the notes page
+app.get('/notes', ((req, res) => {
+    res.sendFile(path.join(__dirname, 'notes.html'))
+}))
 // start server to begin listening
+app.listen(PORT, () => {
+    console.log(`App listening onto port ${PORT}`);
+
+})
