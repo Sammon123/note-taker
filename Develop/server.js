@@ -12,6 +12,7 @@ app.use(express.json());
 // ROUTES
 // create route so that when a person makes a get request to notes, they receive the notes page
 router.get('/', (req, res) => {
+    console.log(res);
     res.json(db);
 })
 
